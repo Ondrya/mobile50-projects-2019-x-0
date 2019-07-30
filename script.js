@@ -7,7 +7,8 @@ function SetCount(selector, newVal) {
 }
 
 function newTodo() {
-  newTask = prompt('New task');
+  newTask = prompt('New task', '');
+  if (newTask === null) return
   if (newTask != '') {
     let li = document.createElement("li");
     li.setAttribute("class", "todo-container");
